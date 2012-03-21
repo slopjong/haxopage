@@ -9,14 +9,16 @@
 <link rel="stylesheet" href="blueprint/src/print.css" type="text/css" media="print">
 <!--[if lt IE 8]><link rel="stylesheet" href="blueprint/src/ie.css" type="text/css" media="screen, projection"><![endif]-->
 <style type="text/css" media="screen">
-p, table, hr, .box { margin-bottom:25px; }
+p, table, hr, .box { margin-bottom:20px; }
 .box p { margin-bottom:10px; }
 </style>
 
 <style type="text/css">
 
 html, body {
-	font-size: 16px;
+	font-size: 14px;
+	height:100%;
+	line-height: 1.3;
 }
 
 img#bg {
@@ -39,8 +41,8 @@ img#bg {
 	/*color: #333;*/
 
 	/* Define geometry and padding */
-	width: 800px;
-	height: 500px;
+	width: 850px;
+	height: 460px;
 	padding: 20px;
 
 	/* position the content container */
@@ -48,7 +50,7 @@ img#bg {
 	top: 50%;
 	left: 50%;	
 	margin-top: -270px;  /* (height/2)+padding */
-	margin-left: -420px;  /* (width/2)+padding */
+	margin-left: -445px;  /* (width/2)+padding */
 	
 	/* do some transperency */
 	opacity: 0.9;
@@ -56,6 +58,13 @@ img#bg {
 	/* round corners */
 	-moz-border-radius: 25px;
 	border-radius: 25px;
+}
+
+#wrapper {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	/*margin: 0 auto -60px; /* the bottom margin is the negative value of the footer's height */
 }
 
 #syn2cat_logo {
@@ -77,9 +86,21 @@ img#bg {
 	border: solid 0px black;
 }
 
+.rotate {
+	-webkit-transform: rotate(-90deg); 
+	-moz-transform: rotate(-90deg);
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+	font-size:8pt;
+}
+
 img { 
 	vertical-align: middle;
 	border-width: 0px;
+}
+
+h2 {
+	margin-top: -1em;
+	color: #007f00;
 }
 
 #bg-button {
@@ -94,6 +115,29 @@ a {
 a:hover {
 	text-decoration: underline;
 }
+
+#sponsors {
+	width: 100%;
+	height: 70px;
+	background-color: white;
+	opacity: 0.4;
+	position: relative;
+	margin: -70px auto 0;
+}
+
+.sponsor {
+	height: 50px;
+	padding: 10px 10px;
+	border: 0px;
+}
+
+/*.platinum .gold .silver .bronze {
+	float:left;
+}*/
+
+/*.media {
+	float:right;
+}*/
 
 </style>
 
@@ -114,30 +158,44 @@ a:hover {
 	});
 </script>
 
+<title>haxogreen summer-camp 2012</title>
 </head>
 
 <body>
+
+<div id="wrapper">
 
 <img src="haxogreen.jpg" id="bg" />
 
 <div id="page">
 	<h1>Haxogreen 2012</h1>
-	<p>After <a href="http://www.youtube.com/watch?v=0Ty6O-vZmh8" target="_blank">more than 80 satisfied campers in 2010</a>, the long awaited third iteration of HaxoGreen, in its 2012 edition is finally here! After a very successful start into the forays of international hackcamps and hackerfests, hackerspaces and hackerspace-folks from all over Europe and beyond will meet for an informal exchange of knowledge on the this third iteration of our 4-day outdoors summer-camp.</p>
+	<h2>July 26th-29th</h2>
+	<p>After <a href="http://www.youtube.com/watch?v=0Ty6O-vZmh8" target="_blank">more than 80 satisfied campers in 2010</a>, the long awaited third iteration of HaxoGreen, in its 2012 edition is finally here! After a very successful start into the forays of international hackcamps and hackerfests, hackerspaces and hackerspace-folks from all over Europe and beyond will meet again for an informal exchange of knowledge on the this third iteration of our 4-day outdoors summer-camp.</p>
 	<p>Whether you're hacking on your project, looking for new and exciting ideas or just craving to share 3 midsummer nights outdoors, socialising with other hackers, artists and geeks, HaxoGreen is the place to be. No need to be a 1337 H4X0r, we welcome all inquisitive people from around the globe.</p>
-	<p> See the <a href="http://www.hackerspace.lu/2012/02/03/haxogreen-2012-call-for-proposals/" target="_blank">call for proposals</a> or head straight on and <a href="http://cfp.haxogreen.lu/submission/hg2012/"><strong>submit your proposal</strong></a>.
+	<p> See the <a href="http://www.haxogreen.lu/2012/Call_For_Proposals" target="_blank">call for proposals</a> or head straight on and <a href="http://cfp.haxogreen.lu/submission/hg2012/"><strong>submit your proposal</strong></a>.<br/>
+	Registration for 2012 is <b>live</b> at <a href="http://www.haxogreen.lu/2012/Registration">the camp wiki</a>!</p>
 	<div style="font-size:120%;">Previous editions</div>
-	<a href="http://wiki.hackerspace.lu/wiki/SummerCamp2009" target="_blank">summercamp 2009</a> | haxogreen 2010
+	<a href="http://wiki.hackerspace.lu/wiki/SummerCamp2009" target="_blank">summercamp 2009</a> | <a href="http://wiki.hackerspace.lu/wiki/HaxoGreen_2010" target="_blank">haxogreen</a> <a href="http://2010.haxogreen.lu" target="_blank">2010</a>
 
 	<div id="background-button"><small><a href="#" id="bg-button">View background for 5 seconds</a></small></div>
 	
 	<hr/>
 
-	<div id="slide">
-		<div id="logos">
-			<a href="http://hackerspace.lu" target="_blank"><img src="syn2logo.png" id="syn2cat_logo" /></a>
-		</div>
-	<div>
+	<div id="logos">
+		<a href="http://hackerspace.lu" target="_blank"><img src="syn2logo.png" id="syn2cat_logo" /></a>
+	</div>
 </div>
-
+</div>
+<div id="sponsors">
+	<span class="rotate">Platinum</span>
+	<a href="http://www.circl.lu" target="_blank" class="platinum" ><img src="circl.png" alt="circl logo" class="sponsor"/></a>
+	<span class="rotate">Silver</span>
+	<a href="http://www.beesecure.lu" target="_blank" class="silver" ><img src="beesecure.png" alt="beesecure logo" class="sponsor"/></a>
+	<span class="rotate">Bronze</span>
+	<a href="http://www.mesh.lu" target="_blank" class="bronze" ><img src="mesh.png" alt="mesh logo" class="sponsor"/></a>
+	<a href="http://www.nostarch.com" target="_blank" class="bronze" ><img src="nostarchpress.png" alt="nostarchpress logo" class="sponsor"/></a>
+	<span class="rotate">Media</span>
+	<a href="http://www.itnation.lu" target="_blank" class="media" ><img src="itnation.png" alt="itnation logo" class="sponsor"/></a>
+</div>
 </body>
 </html>
