@@ -1,199 +1,230 @@
-
-
-<!--
-
-@David:
-
-The haxogreen page is under revision control here: https://github.com/slopjong/haxopage
-No content is lost and please don't just roll the version back to the old one but let
-me explain why I reniced the description if you feel the urge need to change something
-again.
-
--->
-
-
+<!DOCTYPE html>
 <html>
-
 <head>
 
-<link rel="stylesheet" href="css/blueprint/src/reset.css" type="text/css">
-<link rel="stylesheet" href="css/blueprint/src/typography.css" type="text/css">
-
-<link rel="stylesheet" href="css/blueprint/screen.css" type="text/css" media="screen, projection">
-<link rel="stylesheet" href="css/blueprint/src/print.css" type="text/css" media="print">
-<!--[if lt IE 8]><link rel="stylesheet" href="css/blueprint/src/ie.css" type="text/css" media="screen, projection"><![endif]-->
-<style type="text/css" media="screen">
-p, table, hr, .box { margin-bottom:20px; }
-.box p { margin-bottom:10px; }
-</style>
-
-<style type="text/css">
-
-html, body {
-	font-size: 14px;
-	height:100%;
-	line-height: 1.3;
-}
-
-img#bg {
-	position:fixed;
-	top:0;
-	left:0;
-	width:100%;
-	height:100%;
-} 
-
-#page {
-	/* content container styling */
-	background: #eeeeee;
-	border: 1px solid #666;
-
-	/* font settings */
-	/*font-family: Verdana, Arial, Helvetica, sans-serif;*
-	/*font-size: 1.2em;*/
-	/*font-size: 11.5pt;*/
-	/*color: #333;*/
-
-	/* Define geometry and padding */
-	width: 850px;
-	height: 480px;
-	padding: 20px;
-
-	/* position the content container */
-	position: absolute;
-	top: 50%;
-	left: 50%;	
-	margin-top: -280px;  /* (height/2)+padding */
-	margin-left: -445px;  /* (width/2)+padding */
-	
-	/* do some transperency */
-	opacity: 0.9;
-	
-	/* round corners */
-	-moz-border-radius: 25px;
-	border-radius: 25px;
-}
-
-#wrapper {
-	min-height: 100%;
-	height: auto !important;
-	height: 100%;
-	/*margin: 0 auto -60px; /* the bottom margin is the negative value of the footer's height */
-}
-
-#syn2cat_logo {
-	width: 200px;
-}
-
-#background-button {
-	margin-top:20px;
-	clear: both;
-}
-
-#logos {
-	border: solid 0px black;
-	text-align:center;
-	vertical-align: middle;
-}
-
-#slide {
-	border: solid 0px black;
-}
-
-.rotate {
-	-webkit-transform: rotate(-90deg); 
-	-moz-transform: rotate(-90deg);
-	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
-	font-size:8pt;
-}
-
-img { 
-	vertical-align: middle;
-	border-width: 0px;
-}
-
-h2 {
-	margin-top: -1em;
-	color: #007f00;
-}
-
-#bg-button {
- 	/*font-size: 8pt;*/
-}
-
-a {
-	text-decoration: none;
-	color: #007f00;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-#sponsors {
-	width: 100%;
-	height: 70px;
-	background-color: white;
-	opacity: 0.4;
-	position: relative;
-	margin: -70px auto 0;
-}
-
-.sponsor {
-	height: 50px;
-	padding: 10px 10px;
-	border: 0px;
-}
-
-#page p {
-	margin-bottom: 10px;
-}
-
-/*
-#page p.indent {
-	text-indent: 15px;
-}
-*/
-
-/*.platinum .gold .silver .bronze {
-	float:left;
-}*/
-
-/*.media {
-	float:right;
-}*/
-
-</style>
-
-<script src="js/jquery-1.7.min.js" type="text/javascript"></script>
-<script type="text/javascript">
-	$(document).ready(function() {
-		$("#bg-button").click(function(event){
-			event.preventDefault();
-			$("#page")
-				.fadeOut(1000)
-				.delay(5000)
-				.fadeIn(1000);
-			
-			// the background picture flickers during the fading
-			// the cause maybe is the pictures progression
-			//$("#bg").delay(1000).fadeOut("slow").fadeIn("slow");
-		});
-	});
-</script>
-
-<title>haxogreen summer-camp 2012</title>
+    <meta charset="UTF-8">
+        
+    <title>haxogreen summer-camp 2012</title>
+        
+    <link rel="stylesheet" href="css/blueprint/src/reset.css" type="text/css">
+    <link rel="stylesheet" href="css/blueprint/src/typography.css" type="text/css">
+    <link rel="stylesheet" href="css/blueprint/screen.css" type="text/css" media="screen, projection">
+    <link rel="stylesheet" href="css/blueprint/src/print.css" type="text/css" media="print">
+        
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="css/blueprint/src/ie.css" type="text/css" media="screen, projection">
+    <![endif]-->
+    
+    <style media="screen">
+        
+        p, table, hr, .box
+        {
+            margin-bottom:20px;
+        }
+        
+        .box p
+        {
+            margin-bottom:10px;
+        }
+        
+    </style>
+    
+    <style>
+    
+        html, body
+        {
+          font-size: 14px;
+          height:100%;
+          line-height: 1.3;
+          background-color: #000;
+        }
+        
+        img#bg
+        {
+          position:fixed;
+          top:0;
+          left:0;
+          width: 100%;
+          height: auto;
+        }
+        
+        .twitter
+        {
+          position:fixed;
+          top:0;
+          right:0;
+          z-index: 1000;
+          color: #fff;
+          padding: 10px;
+        }
+        
+        .twitter a
+        {
+          color: #fff;
+        }
+        
+        #page
+        {
+          /* content container styling */
+          background: #eee;
+          border: 1px solid #666;
+        
+          /* font settings */
+          /*font-family: Verdana, Arial, Helvetica, sans-serif;*
+          /*font-size: 1.2em;*/
+          /*font-size: 11.5pt;*/
+          /*color: #333;*/
+        
+          /* Define geometry and padding */
+          width: 850px;
+          height: 480px;
+          padding: 20px;
+        
+          /* position the content container */
+          position: absolute;
+          top: 50%;
+          left: 50%;  
+          margin-top: -280px;  /* (height/2)+padding */
+          margin-left: -445px;  /* (width/2)+padding */
+          
+          /* do some transperency */
+          opacity: 0.9;
+          
+          /* round corners */
+          -moz-border-radius: 25px;
+          border-radius: 25px;
+          z-index: 9999999;
+        }
+        
+        #wrapper
+        {
+          min-height: 100%;
+          height: auto !important;
+          height: 100%;
+          /*margin: 0 auto -60px; /* the bottom margin is the negative value of the footer's height */
+        }
+        
+        #syn2cat_logo
+        {
+          width: 200px;
+        }
+        
+        #background-button
+        {
+          margin-top:20px;
+          clear: both;
+        }
+        
+        #logos
+        {
+          border: solid 0px black;
+          text-align:center;
+          vertical-align: middle;
+        }
+        
+        #slide
+        {
+          border: solid 0px black;
+        }
+        
+        .rotate
+        {
+          -webkit-transform: rotate(-90deg); 
+          -moz-transform: rotate(-90deg);
+          filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+          font-size:7pt;
+          display: inline-block;
+        }
+        
+        img
+        { 
+          vertical-align: middle;
+          border-width: 0px;
+        }
+        
+        h2
+        {
+          margin-top: -1em;
+          color: #007f00;
+        }
+        
+        #bg-button
+        {
+           /*font-size: 8pt;*/
+        }
+        
+        a
+        {
+          text-decoration: none;
+          color: #007f00;
+        }
+        
+        a:hover
+        {
+          text-decoration: underline;
+        }
+        
+        #sponsors
+        {
+          width: 100%;
+          background-color: white;
+          opacity: 0.6;
+          position: fixed;
+          bottom: 0;
+          text-align:center;
+        }
+        
+        #sponsors img
+        {
+          height: 38px;
+          padding: 8px 8px;
+          border: 0px;
+        }
+        
+        #page p
+        {
+          margin-bottom: 10px;
+        }
+        
+        /*
+        #page p.indent
+        {
+          text-indent: 15px;
+        }
+        */
+        
+        /*.platinum .gold .silver .bronze
+        {
+          float:left;
+        }*/
+        
+        /*.media
+        {
+          float:right;
+        }*/
+    
+    </style>
+    
 </head>
 
 <body>
 
-<div id="wrapper">
+  <div class="twitter">
+    <a href="http://twitter.com/#!/syn2cat" target="_blank" title="@Syn2cat">
+      For up2date information follow us on
+      <img src="img/twitter.png" alt="twitter">
+    </a>
+  </div>
 
-	<img src="img/haxogreen.jpg" id="bg" />
-	
+  <div id="wrapper">
+    
+    <img src="img/haxogreen.jpg" id="bg" alt="haxogreen">
+        
 	<div id="page">
+        
 		<h1>Haxogreen 2012</h1>
 		<h2>July 26th-29th</h2>
+        
 		<p>After more than 80 satisfied campers in 2010, the long awaited third iteration of HaxoGreen - our 4-day outdoor summer camp - is finally here! Hackers and hackerspace-folks from all over Europe meet again for an informal exchange of knowledge.</p>
 		<p>We combine socialising in the green nature with education covering topics about security, open source and hardware development. The whole camp site will be one big hackcenter with technology understood as a passion wherever bits, bytes and resistors are found.</p>
 		<p>Whether you're hacking on your project, looking for new and exciting ideas, socialising with others or just craving to share 3 midsummer nights outdoors, HaxoGreen is the place to be.</p>
@@ -201,33 +232,112 @@ a:hover {
 		<p>Get an impression of previous editions by having a look at the pictures of the camp <a href="http://wiki.hackerspace.lu/wiki/SummerCamp2009" target="_blank">2009</a> and <a href="http://wiki.hackerspace.lu/wiki/HaxoGreen_2010" target="_blank">2010</a>. Or watch this <a href="http://www.youtube.com/watch?v=0Ty6O-vZmh8" target="_blank">news report</a>.</p>
 		<p>The registration for 2012 is <strong>live</strong> <a href="http://www.haxogreen.lu/2012/Registration" target="_blank">at the camp wiki</a>!</p>
 		<p>If you want to participate with your lecture, panel discussion, workshop or lightning talk, just <a href="http://cfp.haxogreen.lu/submission/hg2012/" target="_blank">submit your proposal</a>.</p>
-		<p>Visit the <a href="https://www.haxogreen.lu/2010/HaxoGreen" target="_blank">HaxoGreen 2010 page</a> for more information about the location and talks/workshops hold last year</p>
+		<p>Visit the <a href="https://www.haxogreen.lu/2010/HaxoGreen" target="_blank">HaxoGreen 2010 page</a> for more information about the venue and all related aspects.</p>
 	
 		<div id="background-button"><small><a href="#" id="bg-button">View background for 5 seconds</a></small></div>
 		
-		<hr/>
-	
+		<hr>
+
 		<div id="logos">
-			<a href="http://hackerspace.lu" target="_blank"><img src="img/syn2logo.png" id="syn2cat_logo" /></a>
+			<a href="http://hackerspace.lu" target="_blank"><img src="img/syn2logo.png" id="syn2cat_logo" alt="syn2cat logo"></a>
 		</div>
 	</div>
-	
-</div>
+    
+  </div>
 
-<div id="sponsors">
-	<span class="rotate">Platinum</span>
-	<a href="http://www.circl.lu" target="_blank" class="platinum" ><img src="sponsors/circl.png" alt="circl logo" class="sponsor"/></a>
-	<span class="rotate">Silver</span>
-	<a href="http://www.beesecure.lu" target="_blank" class="silver" ><img src="sponsors/beesecure.png" alt="beesecure logo" class="sponsor"/></a>
-	<a href="http://www.conostix.lu" target="_blank" class="silver" ><img src="sponsors/conostix.png" alt="conostix logo" class="sponsor"/></a>
-	<span class="rotate">Bronze</span>
-	<a href="http://www.mesh.lu" target="_blank" class="bronze" ><img src="sponsors/mesh.png" alt="mesh logo" class="sponsor"/></a>
-	<a href="http://www.nostarch.com" target="_blank" class="bronze" ><img src="sponsors/nostarchpress.png" alt="nostarchpress logo" class="sponsor"/></a>
-	<a href="http://www.lpice.eu" target="_blank" class="bronze" ><img src="sponsors/lpi.png" alt="lpi logo" class="sponsor"/></a>
-	<span class="rotate">Media</span>
-	<a href="http://www.itnation.lu" target="_blank" class="media" ><img src="sponsors/itnation.png" alt="itnation logo" class="sponsor"/></a>
-	<a href="http://www.woxx.lu" target="_blank" class="media" ><img src="sponsors/woxx-logo.png" alt="woxx logo" class="sponsor"/></a>
-</div>
+  <div id="sponsors">
+    
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    
+    <span class="rotate">Platinum</span>
+     
+    <a href="http://www.circl.lu" target="_blank" class="platinum" >
+      <img src="sponsors/circl.png" alt="circl logo">
+    </a>
+    
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    
+    <span class="rotate">Gold</span>
+    
+    <a href="http://www.soundselection.lu" target="_blank" class="gold" >
+      <img src="sponsors/soundselection.png" alt="soundselection logo">
+    </a>
+    
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    
+    <span class="rotate">Silver</span>
+    
+    <a href="http://www.beesecure.lu" target="_blank" class="silver" >
+      <img src="sponsors/beesecure.png" alt="beesecure logo">
+    </a>
+    
+    <a href="http://www.conostix.lu" target="_blank" class="silver" >
+      <img src="sponsors/conostix.png" alt="conostix logo">
+    </a>
+    
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    
+    <br style="clear:both;">
+    
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    
+    <span class="rotate">Bronze</span>
+    
+    <a href="http://www.mesh.lu" target="_blank" class="bronze" >
+      <img src="sponsors/mesh.png" alt="mesh logo">
+    </a>
+    
+    <a href="http://www.nostarch.com" target="_blank" class="bronze" >
+      <img src="sponsors/nostarchpress.png" alt="nostarchpress logo">
+    </a>
+    
+    <a href="http://www.format.lu" target="_blank" class="bronze" >
+      <img src="sponsors/format.png" alt="format 3D communications logo">
+    </a>
+    
+    <a href="http://www.lpice.eu" target="_blank" class="bronze" >
+      <img src="sponsors/lpi.png" alt="lpi logo">
+    </a>
+    
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    
+    <span class="rotate">Media</span>
+    
+    <a href="http://www.itnation.lu" target="_blank" class="media" >
+      <img src="sponsors/itnation.png" alt="itnation logo">
+    </a>
+    
+    <a href="http://www.woxx.lu" target="_blank" class="media" >
+      <img src="sponsors/woxx-logo.png" alt="woxx logo">
+    </a>
+    
+    <a href="http://www.ara.lu" target="_blank" class="media" >
+      <img src="sponsors/radioara.png" alt="Radio ARA logo">
+    </a>
+    
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    
+  </div>
 
-</body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  
+  <script>
+    
+    $(document).ready(function(){
+      $("#bg-button").click(function(event){
+        event.preventDefault();
+        $("#page")
+          .fadeOut(1000)
+          .delay(5000)
+          .fadeIn(1000);
+        
+        // the background picture flickers during the fading
+        // the cause maybe is the pictures progression
+        //$("#bg").delay(1000).fadeOut("slow").fadeIn("slow");
+      });
+    });
+    
+  </script>
+
+  </body>
 </html>
